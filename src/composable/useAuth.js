@@ -1,15 +1,18 @@
 import { ref } from "vue";
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "firebase/auth"
+import { 
+  signInWithEmailAndPassword, 
+  createUserWithEmailAndPassword, 
+  signOut 
+} from "firebase/auth"
 
 import { firebaseAuth } from "./useFirbase";
-import { async } from "@firebase/util";
 
 const isAuthenticated = ref(false);
 
 const user = ref("");
 
 const useAuth = () => {
-  const login = async(username, password) => {
+  const login = async (username, password) => {
     const credentials = await signInWithEmailAndPassword(
       firebaseAuth, 
       username, 
@@ -22,7 +25,7 @@ const useAuth = () => {
     }
   };
 
-  const signup = async(username, password) => {
+  const signup = async (username, password) => {
     const credentials = await createUserWithEmailAndPassword(
       firebaseAuth, 
       username, 
