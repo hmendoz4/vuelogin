@@ -85,7 +85,7 @@ const { ready, start } = useTimeout(3000, { controls: true });
           <button
           type="submit"
           @submit.prevent="logginIn"
-          class="w-1/2 py-2 text-yellow-200 bg-yellow-600 rounded-lg"
+          class="w-1/2 py-2 text-purple-200 bg-purple-600 rounded-lg"
         >
           Login
         </button>
